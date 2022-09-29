@@ -1,0 +1,16 @@
+.container-full {
+    background-color: black;
+    
+}
+
+.container-card-body {
+    margin: 0px 20px;
+}
+
+.header-part {
+    color: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 180px;
+}
