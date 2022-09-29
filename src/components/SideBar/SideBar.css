@@ -1,0 +1,9 @@
+.user-image {
+    max-width: 100px;
+}
+
+.sidebar-personal-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

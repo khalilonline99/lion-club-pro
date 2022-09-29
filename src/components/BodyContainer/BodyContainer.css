@@ -1,6 +1,12 @@
-.container-full {
-    /* background-color: black; */
+.body-container-full {
     color: tomato;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+}
+
+.container-full {
+    
     
 }
 
@@ -21,4 +27,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+}
+
+.sidebar-body {
+    background-color: orange;
+    color: white;
+    min-width: 300px;
+    /* position: absolute;
+    right: 0; */
 }
