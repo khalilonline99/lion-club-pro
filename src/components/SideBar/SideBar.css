@@ -7,3 +7,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.health-properties {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightslategray;
+    margin: 20px 15px;
+    border-radius: 15px ;
+}
