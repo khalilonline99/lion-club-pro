@@ -3,7 +3,7 @@ import './ExerciseCards.css';
 
 const ExerciseCards = (props) => {
     const {thumbnail, age, name, about, time} = props.card;
-    console.log(props.card);
+    console.log(props);
     return (
         <div  className='cards-all'>
             <div className='card-info'>
@@ -15,7 +15,7 @@ const ExerciseCards = (props) => {
             </div>
             
             <button className='btn-card-list'>
-            <p style={{borderRadius: "10px"}}>Add to List</p>
+            <p style={{borderRadius: "10px"}} onClick={props.addToCartBtn} >Add to List</p>
             </button>
          
         </div>

@@ -16,6 +16,9 @@ const BodyContainer = () => {
         .then(data => setCards(data))
     }, [])
 
+    const addToCartBtn = () => {
+        console.log('button working');
+    }
 
 
     return (
@@ -32,6 +35,7 @@ const BodyContainer = () => {
                     {
                         cards.map(card => <ExerciseCards 
                         card = {card}
+                        addToCartBtn = {addToCartBtn}
                         ></ExerciseCards>)
                     }
                     
