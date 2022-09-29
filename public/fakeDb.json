@@ -2,50 +2,57 @@
     {
       "id": "63354161a08bb2b6c2bbb0ce",
       "thumbnail":"https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7e786dc7d949305ce8b7d9a9d3f60eba57e0d752b55718bf67.jpeg",
-      "age": 40,
+      "age": "20-40",
       "exercise": "Flat Bench Press",
+      "time": 30,
       "about": "Non velit amet commodo ut do magna deserunt et pariatur elit. Magna proident ipsum esse laborum cillum nisi tempor incididunt cillum consequat dolor nostrud. Mollit et ipsum ut irure.\r\n"
     },
     {
       "id": "63354161a39fa9f1db60bec9",
       "thumbnail": "https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7eeb061f50737309a87c0938815e2144c4b25b67baf6a66709.jpeg",
-      "age": 36,
+      "age": "20-45",
       "exercise": "Inclinde Press",
+      "time": 35,
       "about": "Veniam sunt exercitation ad fugiat ipsum sit tempor. Do non anim excepteur ad exercitation elit enim nulla occaecat sunt nulla laboris ut fugiat. Ad in non in cupidatat et amet mollit officia laboris laborum et fugiat. Nostrud esse laboris dolor proident ad ut nulla ut adipisicing.\r\n"
     },
     {
       "id": "6335416188b968b11a2e0ee0",
       "thumbnail": "https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7ee59d6b106f725d76dc09aa3fe3a4d7f7575d643a9462612b.jpeg",
-      "age": 33,
+      "age": "30-40",
       "exercise": "Decline Press",
+      "time": 30,
       "about": "Aliqua eiusmod officia proident dolor ut sint consequat sunt magna minim id. Qui minim do excepteur elit proident do. Tempor nisi do deserunt non duis duis aute. Id nulla minim consequat duis qui est minim ea deserunt ex ex non proident ut. Cillum est consequat enim reprehenderit. Occaecat tempor ad non proident culpa ad labore. Duis aliqua cillum laborum exercitation excepteur sint non.\r\n"
     },
     {
       "id": "633541617f521f1ea84546ff",
       "thumbnail": "https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7e037108e7e73e30def86edbff007012bcfb69b524a008a72e.jpeg",
-      "age": 25,
+      "age": "30-50",
       "exercise": "Cale Pec",
+      "time": 50,
       "about": "Ea officia elit fugiat sint adipisicing elit sunt duis duis velit adipisicing proident do. Consectetur ullamco minim ut consectetur mollit occaecat irure tempor. Sint minim fugiat et fugiat occaecat.\r\n"
     },
     {
       "id": "633541619ed4c07beb5f4bca",
       "thumbnail": "https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7e037108e7e73e30deeaa2f3f696c711f94b9a3a218b5c99aa.jpeg",
-      "age": 36,
+      "age": "20-40",
       "exercise": "Pec Fly",
+      "time": 40,
       "about": "Nostrud ad in excepteur non consectetur aute esse laboris ad elit duis enim minim. Pariatur in ad eu duis nostrud quis. Laboris id est consequat reprehenderit ut. Cillum voluptate ad voluptate culpa elit sint magna deserunt tempor commodo amet nostrud enim est.\r\n"
     },
     {
       "id": "633541618de59617492d3fb9",
       "thumbnail": "https://serpapi.com/searches/63354256925641f505b65b2b/images/ca7ac7225b13eb7e037108e7e73e30de43b323b052f659bbcd04d8a7959981ca.jpeg",
-      "age": 37,
+      "age": "30-40",
       "exercise": "Dumpbell Pullover",
+      "time": 30,
       "about": "Quis consectetur nostrud laboris sit. Magna do dolor voluptate laborum eu aliqua do Lorem ipsum commodo. Excepteur elit tempor consectetur quis occaecat Lorem aliqua esse ipsum ea et. Adipisicing ad veniam pariatur ex ex non quis excepteur eiusmod ut anim officia cillum. Incididunt adipisicing aliqua elit proident fugiat commodo irure non aliqua commodo. Reprehenderit nulla labore ea adipisicing sit velit in qui dolore velit do excepteur proident id. Ullamco velit fugiat in commodo veniam.\r\n"
     },
     {
       "id": "6335416135ae13cff0b233d7",
       "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdawxRZMP6K6Rftsa7FjTDFqAfNf1Dc4Pyag&usqp=CAU",
-      "age": 35,
+      "age": "20-40",
       "exercise": "Wide Pushup",
+      "time": 30,
       "about": "Dolore velit et est quis ea aliquip proident sunt. Ut aliqua magna in duis nisi non ipsum sit quis laborum. Deserunt tempor aute ex magna reprehenderit fugiat pariatur Lorem laboris Lorem laboris est fugiat consequat. Sint excepteur et pariatur officia.\r\n"
     }
   ]

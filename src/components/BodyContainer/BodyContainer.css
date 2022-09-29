@@ -1,5 +1,6 @@
 .container-full {
-    background-color: black;
+    /* background-color: black; */
+    color: tomato;
     
 }
 
@@ -14,4 +15,10 @@
     justify-content: space-evenly;
     max-width: 180px;
     margin: auto;
+}
+
+.cards-in-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
