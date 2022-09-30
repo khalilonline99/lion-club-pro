@@ -7,8 +7,9 @@ import ExerciseCards from '../ExerciseCards/ExerciseCards';
 import SideBar from '../SideBar/SideBar';
 
 
-const BodyContainer = () => {
+const BodyContainer = (props) => {
     const [cards, setCards] = useState([]);
+    console.log(props);
 
     useEffect(() => {
         fetch('fakeDb.json')
@@ -16,10 +17,7 @@ const BodyContainer = () => {
         .then(data => setCards(data))
     }, [])
 
-    const addToCartBtn = () => {
-        console.log('button working');
-    }
-
+   
 
     return (
         <div className='body-container-full'>
@@ -35,7 +33,7 @@ const BodyContainer = () => {
                     {
                         cards.map(card => <ExerciseCards 
                         card = {card}
-                        addToCartBtn = {addToCartBtn}
+                        addToCartBtn = {props.addToCartBtn}
                         ></ExerciseCards>)
                     }
                     

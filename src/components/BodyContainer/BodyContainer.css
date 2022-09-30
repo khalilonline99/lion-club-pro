@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    margin-left: 15px;
 }
 
 .sidebar-body {

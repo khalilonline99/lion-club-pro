@@ -2,9 +2,17 @@ import './App.css';
 import BodyContainer from './components/BodyContainer/BodyContainer';
 
 function App() {
+
+  const addToCartBtn = () => {
+    console.log('button working');
+}
+
+
   return (
     <div className="App">
-      <BodyContainer></BodyContainer>
+      <BodyContainer
+        addToCartBtn = {addToCartBtn}
+      ></BodyContainer>
     </div>
   );
 }
