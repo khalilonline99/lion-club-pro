@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonAddBreak from '../../utilities/ButtonAddBreak/ButtonAddBreak';
 import ExerciseDetails from '../../utilities/ExerciseDetails/ExerciseDetails';
 import './SideBar.css'
 
 const SideBar = (props) => {
 
+    const [breakDisplay, SetBreakDisplay] = useState(0);
+
     const btnBreak = (brktime) => {
-        console.log('ok',brktime);
+        // const newBreakDisplay = breakDisplay + brktime;
+        SetBreakDisplay(brktime);
 }
 
     return (
@@ -47,6 +50,7 @@ const SideBar = (props) => {
         <div>
             <ExerciseDetails
             newReqTime = {props.newReqTime}
+            breakDisplay = {breakDisplay}
             ></ExerciseDetails>
         </div>
 

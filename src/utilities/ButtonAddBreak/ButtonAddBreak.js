@@ -2,9 +2,6 @@ import React from 'react';
 import './ButtonAddBreak.css'
 
 const ButtonAddBreak = (props) => {
-    console.log(props)
-
-
 
     return (
         <div>
