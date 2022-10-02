@@ -24,6 +24,8 @@ const BodyContainer = (props) => {
         let totalTime = newReqTime + time;
         setNewReqTime(totalTime);
         }
+    
+        
    
 
     return (
@@ -40,6 +42,7 @@ const BodyContainer = (props) => {
                     {
                         cards.map(card => <ExerciseCards 
                         card = {card}
+                        key = {card.id}
                         addToCartBtn = {addToCartBtn}
                         ></ExerciseCards>)
                     }
@@ -50,6 +53,7 @@ const BodyContainer = (props) => {
             <div className='sidebar-body'>
                 <SideBar
                 newReqTime = {newReqTime}
+                
                 ></SideBar>
             </div>
 

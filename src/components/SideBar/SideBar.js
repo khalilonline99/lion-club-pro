@@ -4,6 +4,11 @@ import ExerciseDetails from '../../utilities/ExerciseDetails/ExerciseDetails';
 import './SideBar.css'
 
 const SideBar = (props) => {
+
+    const btnBreak = (brktime) => {
+        console.log('ok',brktime);
+}
+
     return (
         <div>
             {/* image, name and address */}
@@ -17,23 +22,25 @@ const SideBar = (props) => {
                 </div>
                 <div className='health-properties'>
                     <div>
-                    <h3>65 kg</h3>
+                    <h3>74 kg</h3>
                     <h4>Weight</h4>
                     </div>
                     <div>
-                    <h3>65 kg</h3>
-                    <h4>Weight</h4>
+                    <h3>5'4"</h3>
+                    <h4>Height</h4>
                     </div>
                     <div>
-                    <h3>65 kg</h3>
-                    <h4>Weight</h4>
+                    <h3>27 Years</h3>
+                    <h4>Age</h4>
                     </div>
                 </div>
             </div>
 
         {/* add a break */}
             <div>
-                <ButtonAddBreak></ButtonAddBreak>
+                <ButtonAddBreak
+                btnBreak = {btnBreak}
+                ></ButtonAddBreak>
             </div>
 
         {/* Exercise Details*/}
