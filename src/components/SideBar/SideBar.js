@@ -3,7 +3,7 @@ import ButtonAddBreak from '../../utilities/ButtonAddBreak/ButtonAddBreak';
 import ExerciseDetails from '../../utilities/ExerciseDetails/ExerciseDetails';
 import './SideBar.css'
 
-const SideBar = () => {
+const SideBar = (props) => {
     return (
         <div>
             {/* image, name and address */}
@@ -38,7 +38,9 @@ const SideBar = () => {
 
         {/* Exercise Details*/}
         <div>
-            <ExerciseDetails></ExerciseDetails>
+            <ExerciseDetails
+            newReqTime = {props.newReqTime}
+            ></ExerciseDetails>
         </div>
 
         <div>

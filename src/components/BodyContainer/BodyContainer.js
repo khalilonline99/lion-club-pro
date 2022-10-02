@@ -9,7 +9,8 @@ import SideBar from '../SideBar/SideBar';
 
 const BodyContainer = (props) => {
     const [cards, setCards] = useState([]);
-    console.log(props);
+    // console.log(props);
+    const [newReqTime, setNewReqTime] = useState(0);
 
     useEffect(() => {
         fetch('fakeDb.json')
@@ -17,6 +18,12 @@ const BodyContainer = (props) => {
         .then(data => setCards(data))
     }, [])
 
+
+    const addToCartBtn = (time) => {
+        setNewReqTime(time);
+        let totalTime = newReqTime + time;
+        setNewReqTime(totalTime);
+        }
    
 
     return (
@@ -33,7 +40,7 @@ const BodyContainer = (props) => {
                     {
                         cards.map(card => <ExerciseCards 
                         card = {card}
-                        addToCartBtn = {props.addToCartBtn}
+                        addToCartBtn = {addToCartBtn}
                         ></ExerciseCards>)
                     }
                     
@@ -41,7 +48,9 @@ const BodyContainer = (props) => {
             </div>
 
             <div className='sidebar-body'>
-                <SideBar></SideBar>
+                <SideBar
+                newReqTime = {newReqTime}
+                ></SideBar>
             </div>
 
         </div>

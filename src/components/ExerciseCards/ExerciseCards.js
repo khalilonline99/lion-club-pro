@@ -15,7 +15,7 @@ const ExerciseCards = (props) => {
             </div>
             
             <button className='btn-card-list'>
-            <p style={{borderRadius: "10px"}} onClick={props.addToCartBtn} >Add to List</p>
+            <p style={{borderRadius: "10px"}} onClick={()=> props.addToCartBtn(time)} >Add to List</p>
             </button>
          
         </div>
