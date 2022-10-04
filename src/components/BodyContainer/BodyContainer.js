@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 import ExerciseCards from '../ExerciseCards/ExerciseCards';
 import SideBar from '../SideBar/SideBar';
+import { addToList } from '../../utilities/FakeDb/FakeDb';
 
 
 const BodyContainer = (props) => {
@@ -19,10 +20,13 @@ const BodyContainer = (props) => {
     }, [])
 
 
-    const addToCartBtn = (time) => {
+    const addToCartBtn = (id) => {
         setNewReqTime(time);
         let totalTime = newReqTime + time;
         setNewReqTime(totalTime);
+        
+        addToList(id);
+
         }
     
         

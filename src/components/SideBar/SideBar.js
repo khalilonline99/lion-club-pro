@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ButtonAddBreak from '../../utilities/ButtonAddBreak/ButtonAddBreak';
 import ExerciseDetails from '../../utilities/ExerciseDetails/ExerciseDetails';
+import { brkTimeToLocal } from '../../utilities/FakeDb/FakeDb';
 import './SideBar.css'
 
 const SideBar = (props) => {
@@ -8,8 +9,9 @@ const SideBar = (props) => {
     const [breakDisplay, SetBreakDisplay] = useState(0);
 
     const btnBreak = (brktime) => {
-        // const newBreakDisplay = breakDisplay + brktime;
         SetBreakDisplay(brktime);
+        // localStorage.setItem('breaktime' , brktime)
+        brkTimeToLocal(brktime);
 }
 
     return (
