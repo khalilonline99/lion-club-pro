@@ -20,17 +20,26 @@ const BodyContainer = (props) => {
     }, [])
 
 
-    const addToCartBtn = (id) => {
-        setNewReqTime(time);
-        let totalTime = newReqTime + time;
-        setNewReqTime(totalTime);
+    const addToCartBtn = (times, ids) => {
+       
+
+        const exerciseTimeLocal = localStorage.getItem('exercise-time')
+        const exerciseTimeLocalObj = JSON.parse(exerciseTimeLocal);
+        console.log(exerciseTimeLocalObj)
+        const exerciseTimeId = exerciseTimeLocalObj.id;
+        // if (ids === exerciseTimeId){
+
+        // }
+        // else{
+        //     setNewReqTime(times);
+        //     let totalTime = newReqTime + times;
+        //     setNewReqTime(totalTime);
+        // }
         
-        addToList(id);
+        addToList(times, ids);
 
         }
     
-        
-   
 
     return (
         <div className='body-container-full'>

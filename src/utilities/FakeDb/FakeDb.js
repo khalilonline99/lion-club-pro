@@ -3,15 +3,43 @@ const brkTimeToLocal = (brktime) => {
 }
 
 
-const addToList = (id) => {
-    if (localStorage.getItem(id)){
-        console.log('already exist');
+const addToList = (time, id) => {
+    let exerciseData = {}
+    const storedTime = localStorage.getItem('exercise-time')
+
+    if (storedTime){
+        const storedTimeObj = JSON.parse(storedTime)
+
+        if(id === storedTimeObj.id){
+
+        }
+        else{
+
+            const newTime = storedTimeObj.time + time;
+            time = newTime;
+            let exerciseData = {time, id}
+            localStorage.setItem('exercise-time', JSON.stringify(exerciseData));
+        }
+
+        
     }
     else{
-
-        localStorage.setItem('exercise-time', id);
+        exerciseData = {time, id}
+        localStorage.setItem('exercise-time', JSON.stringify(exerciseData));
     }
     
 }
 
-export {brkTimeToLocal, addToList}
+const getStoredCart = () => {
+    let exerciseData = {}
+    const storedTime = localStorage.getItem('exercise-time')
+
+    if (storedTime){
+     exerciseData = JSON.parse(storedTime)
+    }
+    return exerciseData;
+
+}
+
+
+export {brkTimeToLocal, addToList, getStoredCart}
