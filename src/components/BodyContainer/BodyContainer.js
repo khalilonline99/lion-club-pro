@@ -6,6 +6,7 @@ import { faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 import ExerciseCards from '../ExerciseCards/ExerciseCards';
 import SideBar from '../SideBar/SideBar';
 import { addToList, getStoredCart } from '../../utilities/FakeDb/FakeDb';
+import { logDOM } from '@testing-library/react';
 
 
 const BodyContainer = (props) => {
@@ -22,34 +23,62 @@ const BodyContainer = (props) => {
 
     useEffect(() => {
         const getStoredCartData = getStoredCart();
-        
-        for (const id in getStoredCartData) {
+        let setDataToUi = [];
+            /* for (let allStoredObj of getStoredCartData) {
+                setDataToUi.push(allStoredObj.time)
+                console.log(allStoredObj);
+            } */
 
-            // console.log(getStoredCartData[id]);
+            getStoredCartData.map(allStoredObj => {
+                setDataToUi.push(allStoredObj.time)
+                console.log(allStoredObj);
+            })
 
-            // if (Object.hasOwnProperty.call(getStoredCartData, id)) {
-            //     const element = getStoredCartData[id];
-                
+            // setNewReqTime(setDataToUi);
+            // for (const id in getStoredCartData) {
+    
+            //     console.log(getStoredCartData[id]);
+    
+            //     if (Object.hasOwnProperty.call(getStoredCartData, id)) {
+            //         const element = getStoredCartData[id];
+                    
+            //     }
             // }
-        }
         
     } , [])
 
+
     const addToCartBtn = (times, ids) => {
-       
 
         const exerciseTimeLocal = localStorage.getItem('exercise-time')
         const exerciseTimeLocalObj = JSON.parse(exerciseTimeLocal);
-        // const exerciseTimeId = exerciseTimeLocalObj.time
-        // console.log(exerciseTimeId);
-        // if (ids === exerciseTimeId){
 
-        // }
-        // else{
-        //     setNewReqTime(times);
-        //     let totalTime = newReqTime + times;
-        //     setNewReqTime(totalTime);
-        // }
+
+        if (exerciseTimeLocalObj){
+
+            let defaultArry = ["default"];
+            let arrayLoop = exerciseTimeLocalObj.map(exerciseTimeLocalObjSingle => {
+            defaultArry = [...defaultArry, exerciseTimeLocalObjSingle.id]})
+
+            //will do nothing if the id is in the local db
+
+            if(defaultArry.includes(ids)){
+
+            }
+            else {
+                setNewReqTime(times);
+                let totalTime = newReqTime + times;
+                setNewReqTime(totalTime);
+            }
+
+        }
+        else {
+            setNewReqTime(times);
+            let totalTime = newReqTime + times;
+            setNewReqTime(totalTime);
+        }
+        
+        
         
         addToList(times, ids);
 

@@ -17,7 +17,8 @@ const addToList = (time, id) => {
         let arrio = exerciseDatall.map(storedTimeSingleObj => {
         arry = [...arry, storedTimeSingleObj.id]
         
-    })
+        })
+        
         if(arry.includes(id)){
             // console.log('exists', id);
         }
@@ -48,6 +49,9 @@ const getStoredCart = () => {
     if (storedTime){
      exerciseData = JSON.parse(storedTime)
     }
+    // else {
+    //     localStorage.setItem('exercise-time', []);
+    // }
     return exerciseData;
 
 }
