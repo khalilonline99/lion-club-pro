@@ -24,7 +24,7 @@ const addToList = (time, id) => {
         }
         else {
             exerciseDatall = [...exerciseDatall, {id,time}]
-            console.log(exerciseDatall);
+            // console.log(exerciseDatall);
         }
     
     }
@@ -43,7 +43,7 @@ const addToList = (time, id) => {
 }
 
 const getStoredCart = () => {
-    let exerciseData = {}
+    let exerciseData = []
 
     const storedTime = localStorage.getItem('exercise-time')
     if (storedTime){

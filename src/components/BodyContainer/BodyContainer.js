@@ -23,17 +23,22 @@ const BodyContainer = (props) => {
 
     useEffect(() => {
         const getStoredCartData = getStoredCart();
-        let setDataToUi = [];
-            /* for (let allStoredObj of getStoredCartData) {
-                setDataToUi.push(allStoredObj.time)
-                console.log(allStoredObj);
-            } */
 
-            getStoredCartData.map(allStoredObj => {
+        let setDataToUi = [];
+            for (let allStoredObj of getStoredCartData) {
+                setDataToUi.push(allStoredObj.time)
+            } 
+            console.log(setDataToUi);
+            const totalSumFromDb = setDataToUi.reduce((a,b) => a+b , 0)
+            console.log(totalSumFromDb);
+            setNewReqTime(totalSumFromDb);
+
+
+            /* getStoredCartData.map(allStoredObj => {
                 setDataToUi.push(allStoredObj.time)
                 console.log(allStoredObj);
             })
-
+ */
             // setNewReqTime(setDataToUi);
             // for (const id in getStoredCartData) {
     
@@ -45,20 +50,19 @@ const BodyContainer = (props) => {
             //     }
             // }
         
-    } , [])
+    } , [newReqTime])
 
 
     const addToCartBtn = (times, ids) => {
 
         const exerciseTimeLocal = localStorage.getItem('exercise-time')
-        const exerciseTimeLocalObj = JSON.parse(exerciseTimeLocal);
-
-
-        if (exerciseTimeLocalObj){
-
+        if (exerciseTimeLocal){
+            const exerciseTimeLocalObj = JSON.parse(exerciseTimeLocal);
             let defaultArry = ["default"];
             let arrayLoop = exerciseTimeLocalObj.map(exerciseTimeLocalObjSingle => {
-            defaultArry = [...defaultArry, exerciseTimeLocalObjSingle.id]})
+            defaultArry = [...defaultArry, exerciseTimeLocalObjSingle.id];
+
+                })
 
             //will do nothing if the id is in the local db
 
