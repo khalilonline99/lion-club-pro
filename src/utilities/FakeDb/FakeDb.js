@@ -4,30 +4,38 @@ const brkTimeToLocal = (brktime) => {
 
 
 const addToList = (time, id) => {
-    let exerciseDatall
     
     const storedTime = localStorage.getItem('exercise-time')
+    const storedTimeObj = JSON.parse(storedTime)
+    let exerciseDatall = storedTimeObj;
+    // console.log(exerciseDatall);
+    
 
     if (storedTime){
-        const storedTimeObj = JSON.parse(storedTime)
-        console.log(storedTimeObj);
 
-        let exerciseData = {id, time}
-        exerciseDatall = {...exerciseData}
-
+        let arry = ["default"];
+        let arrio = exerciseDatall.map(storedTimeSingleObj => {
+        arry = [...arry, storedTimeSingleObj.id]
         
+    })
+        if(arry.includes(id)){
+            // console.log('exists', id);
+        }
+        else {
+            exerciseDatall = [...exerciseDatall, {id,time}]
+            console.log(exerciseDatall);
+        }
+    
     }
     else{
-        
-        exerciseDatall = {}
-        
+        exerciseDatall= [{id, time}];
     }
 
-    const quantity = exerciseDatall[time]
+    /* const quantity = exerciseDatall[time]
     if (quantity) {
         const newQuantity = quantity + time;
         exerciseDatall[time] = newQuantity;
-    }
+    } */
     
     localStorage.setItem('exercise-time', JSON.stringify(exerciseDatall));
     

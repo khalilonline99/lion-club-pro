@@ -14,8 +14,8 @@ const ExerciseCards = (props) => {
             <p>Required Time: {time} Sec</p>
             </div>
             
-            <button className='btn-card-list'>
-            <p style={{borderRadius: "10px"}} onClick={()=> props.addToCartBtn(time, id)} >Add to List</p>
+            <button className='btn-card-list' onClick={()=> props.addToCartBtn(time, id)} >Add to List
+            {/* <p style={{borderRadius: "10px"}} onClick={()=> props.addToCartBtn(time, id)} >Add to List</p> */}
             </button>
          
         </div>
