@@ -27,12 +27,9 @@ const BodyContainer = (props) => {
         let setDataToUi = [];
             for (let allStoredObj of getStoredCartData) {
                 setDataToUi.push(allStoredObj.time)
-            } 
-            console.log(setDataToUi);
-            const totalSumFromDb = setDataToUi.reduce((a,b) => a+b , 0)
-            console.log(totalSumFromDb);
+            }
+            const totalSumFromDb = setDataToUi.reduce((a,b) => a+b , 0);
             setNewReqTime(totalSumFromDb);
-
 
             /* getStoredCartData.map(allStoredObj => {
                 setDataToUi.push(allStoredObj.time)

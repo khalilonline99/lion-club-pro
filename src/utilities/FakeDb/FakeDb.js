@@ -56,5 +56,14 @@ const getStoredCart = () => {
 
 }
 
+const getBreakData = () => {
+    let breakData =[]
+    const storedBreakData = localStorage.getItem('breaktime')
+    if (storedBreakData){
+        breakData = JSON.parse(storedBreakData)
+    }
+    return breakData;
+}
 
-export {brkTimeToLocal, addToList, getStoredCart}
+
+export {brkTimeToLocal, addToList, getStoredCart, getBreakData}

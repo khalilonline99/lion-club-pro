@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ButtonAddBreak from '../../utilities/ButtonAddBreak/ButtonAddBreak';
 import ExerciseDetails from '../../utilities/ExerciseDetails/ExerciseDetails';
-import { brkTimeToLocal } from '../../utilities/FakeDb/FakeDb';
+import { brkTimeToLocal, getBreakData } from '../../utilities/FakeDb/FakeDb';
 import './SideBar.css'
 
-const SideBar = (props) => {
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// toast.configure()
 
+
+const SideBar = (props) => {
     const [breakDisplay, SetBreakDisplay] = useState(0);
 
     const btnBreak = (brktime) => {
@@ -13,6 +17,24 @@ const SideBar = (props) => {
         // localStorage.setItem('breaktime' , brktime)
         brkTimeToLocal(brktime);
 }
+
+    useEffect(()=> {
+        const getBreakTimeData = getBreakData();
+        SetBreakDisplay(getBreakTimeData);
+
+    }, [])
+
+    const notify = () => {
+        // toast('Congratulations on your success!', 
+        // {position: toast.POSITION.BOTTOM_CENTER})
+        toast.info("Congratulations! You've done it.", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 2000,
+            hideProgressBar: true
+          });
+    }
+
+    
 
     return (
         <div>
@@ -57,7 +79,8 @@ const SideBar = (props) => {
         </div>
 
         <div>
-            <button>Activity Completed</button>
+            <button onClick={notify} >Activity Completed</button>
+            <ToastContainer />
         </div>
 
         </div>
