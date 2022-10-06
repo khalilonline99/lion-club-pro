@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 import ExerciseCards from '../ExerciseCards/ExerciseCards';
 import SideBar from '../SideBar/SideBar';
-import { addToList } from '../../utilities/FakeDb/FakeDb';
+import { addToList, getStoredCart } from '../../utilities/FakeDb/FakeDb';
 
 
 const BodyContainer = (props) => {
@@ -20,13 +20,28 @@ const BodyContainer = (props) => {
     }, [])
 
 
+    useEffect(() => {
+        const getStoredCartData = getStoredCart();
+        
+        for (const id in getStoredCartData) {
+
+            // console.log(getStoredCartData[id]);
+
+            // if (Object.hasOwnProperty.call(getStoredCartData, id)) {
+            //     const element = getStoredCartData[id];
+                
+            // }
+        }
+        
+    } , [])
+
     const addToCartBtn = (times, ids) => {
        
 
         const exerciseTimeLocal = localStorage.getItem('exercise-time')
         const exerciseTimeLocalObj = JSON.parse(exerciseTimeLocal);
-        console.log(exerciseTimeLocalObj)
-        const exerciseTimeId = exerciseTimeLocalObj.id;
+        // const exerciseTimeId = exerciseTimeLocalObj.time
+        // console.log(exerciseTimeId);
         // if (ids === exerciseTimeId){
 
         // }
