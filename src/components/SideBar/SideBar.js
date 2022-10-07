@@ -6,7 +6,6 @@ import './SideBar.css'
 
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// toast.configure()
 
 
 const SideBar = (props) => {
@@ -14,7 +13,6 @@ const SideBar = (props) => {
 
     const btnBreak = (brktime) => {
         SetBreakDisplay(brktime);
-        // localStorage.setItem('breaktime' , brktime)
         brkTimeToLocal(brktime);
 }
 
@@ -25,8 +23,6 @@ const SideBar = (props) => {
     }, [])
 
     const notify = () => {
-        // toast('Congratulations on your success!', 
-        // {position: toast.POSITION.BOTTOM_CENTER})
         toast.info("Congratulations! You've done it.", {
             position: toast.POSITION.TOP_CENTER,
             autoClose: 2000,
@@ -43,8 +39,8 @@ const SideBar = (props) => {
                 <div className='sidebar-personal-info'>
                 <img className='user-image' src="https://cdn3d.iconscout.com/3d/premium/thumb/user-profile-2871145-2384395.png" alt="" />
                 <section className='texts-details'>
-                    <h3>Niaz Ali</h3>
-                    <p>Habiganj, Sylhet</p>
+                    <h3>Ibrahim Khalil</h3>
+                    <p>Cumilla, Bangladesh</p>
                 </section>
                 </div>
                 <div className='health-properties'>
