@@ -7,11 +7,11 @@ import ExerciseCards from '../ExerciseCards/ExerciseCards';
 import SideBar from '../SideBar/SideBar';
 import { addToList, getStoredCart } from '../../utilities/FakeDb/FakeDb';
 import { logDOM } from '@testing-library/react';
+import Blogs from '../Blogs/Blogs';
 
 
 const BodyContainer = (props) => {
     const [cards, setCards] = useState([]);
-    // console.log(props);
     const [newReqTime, setNewReqTime] = useState(0);
 
     useEffect(() => {
@@ -30,22 +30,6 @@ const BodyContainer = (props) => {
             }
             const totalSumFromDb = setDataToUi.reduce((a,b) => a+b , 0);
             setNewReqTime(totalSumFromDb);
-
-            /* getStoredCartData.map(allStoredObj => {
-                setDataToUi.push(allStoredObj.time)
-                console.log(allStoredObj);
-            })
- */
-            // setNewReqTime(setDataToUi);
-            // for (const id in getStoredCartData) {
-    
-            //     console.log(getStoredCartData[id]);
-    
-            //     if (Object.hasOwnProperty.call(getStoredCartData, id)) {
-            //         const element = getStoredCartData[id];
-                    
-            //     }
-            // }
         
     } , [newReqTime])
 
@@ -59,8 +43,7 @@ const BodyContainer = (props) => {
             let arrayLoop = exerciseTimeLocalObj.map(exerciseTimeLocalObjSingle => {
             defaultArry = [...defaultArry, exerciseTimeLocalObjSingle.id];
 
-                })
-
+        })
             //will do nothing if the id is in the local db
 
             if(defaultArry.includes(ids)){
@@ -71,18 +54,13 @@ const BodyContainer = (props) => {
                 let totalTime = newReqTime + times;
                 setNewReqTime(totalTime);
             }
-
         }
         else {
             setNewReqTime(times);
             let totalTime = newReqTime + times;
             setNewReqTime(totalTime);
         }
-        
-        
-        
         addToList(times, ids);
-
         }
     
 
@@ -105,6 +83,10 @@ const BodyContainer = (props) => {
                         ></ExerciseCards>)
                     }
                     
+                </div>
+
+                <div>
+                    <Blogs/>
                 </div>
             </div>
 

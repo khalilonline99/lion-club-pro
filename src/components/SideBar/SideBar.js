@@ -42,7 +42,7 @@ const SideBar = (props) => {
             <div>
                 <div className='sidebar-personal-info'>
                 <img className='user-image' src="https://cdn3d.iconscout.com/3d/premium/thumb/user-profile-2871145-2384395.png" alt="" />
-                <section>
+                <section className='texts-details'>
                     <h3>Niaz Ali</h3>
                     <p>Habiganj, Sylhet</p>
                 </section>
@@ -57,7 +57,7 @@ const SideBar = (props) => {
                     <h4>Height</h4>
                     </div>
                     <div>
-                    <h3>27 Years</h3>
+                    <h3>27 Yrs</h3>
                     <h4>Age</h4>
                     </div>
                 </div>

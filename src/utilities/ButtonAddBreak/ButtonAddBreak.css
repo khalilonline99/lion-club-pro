@@ -11,3 +11,18 @@
     background-color: orangered;
     color: white;
 }
+
+@media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .btn-single {
+        padding: 5px 10px;
+        margin: 5px;
+    }
+ }
+ @media only screen and (device-width: 768px) {
+    /* default iPad screens */
+    .btn-single {
+        padding: 5px 10px;
+        margin: 5px;
+    }
+ }

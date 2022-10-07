@@ -1,0 +1,20 @@
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+.exercise-details h2{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+}
+
+@media only screen and (device-width: 768px) {
+
+    .exercise-details h2{
+        font-size: 13px;
+        font-weight: 700;
+    }
+    
+    }

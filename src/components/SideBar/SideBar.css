@@ -15,3 +15,44 @@
     margin: 20px 15px;
     border-radius: 15px ;
 }
+
+@media only screen and (max-device-width: 480px) {
+    .user-image {
+        max-width: 50px;
+    }
+    .texts-details {
+        font-size: 13px;
+    }
+    .health-properties {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: lightslategray;
+        margin: 20px 15px;
+        border-radius: 15px ;
+    }
+
+}
+
+@media only screen and (device-width: 768px) {
+    .user-image {
+        max-width: 50px;
+        margin: 10px;
+    }
+    .texts-details {
+        font-size: 13px;
+    }
+    .health-properties {
+        font-size: 13px;        
+        display: flex;
+        justify-content: space-evenly;
+        background-color: lightslategray;
+        margin: 20px 15px;
+        padding: 10px 10px;
+        border-radius: 10px ;
+    }
+    .health-properties div h4{
+        font-weight: 300;
+    }
+}   

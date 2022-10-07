@@ -37,3 +37,34 @@
     /* position: absolute;
     right: 0; */
 }
+
+@media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .cards-in-body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 20px;
+    }
+
+    .sidebar-body {
+        background-color: orange;
+        color: white;
+        min-width: 150px;
+    }
+ }
+
+ @media only screen and (device-width: 768px) {
+    /* default iPad screens */
+    .cards-in-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-left: 15px;
+    }
+
+    .sidebar-body {
+        background-color: orange;
+        color: white;
+        min-width: 200px;
+    }
+ }
