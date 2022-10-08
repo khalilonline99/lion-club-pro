@@ -19,7 +19,7 @@
         margin: 5px;
     }
  }
- @media only screen and (device-width: 768px) {
+ @media only screen and (min-device-width: 481px) and (max-device-width: 768px)   {
     /* default iPad screens */
     .btn-single {
         padding: 5px 10px;

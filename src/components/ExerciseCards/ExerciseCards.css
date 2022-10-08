@@ -27,15 +27,18 @@
 }
 
 .card-img {
-    max-width: 180px;
+    max-width: 85%;
 }
 
 @media only screen and (max-device-width: 480px) {
     /* styles for mobile browsers smaller than 480px; (iPhone) */
     .card-img {
-        max-width: 140px;
+        max-width: 75%;
     }
  }
- @media only screen and (device-width: 768px) {
-    /* default iPad screens */
+ @media only screen and (min-device-width: 481px) and (max-device-width: 768px)  {
+    /* default tablet screens */
+    .card-img {
+        max-width: 75%;
+    }
  }
